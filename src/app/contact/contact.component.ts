@@ -27,7 +27,11 @@ import emailjs from '@emailjs/browser';
             <line x1="12" y1="8" x2="12" y2="12"/>
             <line x1="12" y1="16" x2="12.01" y2="16"/>
           </svg>
-          <span>Oops, something went wrong.</span>
+          <div class="error-text">
+            <div class="error-main">Oops, something went wrong.</div>
+            <div class="error-detail">Please check your EmailJS configuration or try again later.</div>
+            <div class="error-hint">Open browser console (F12) for detailed error information.</div>
+          </div>
         </div>
 
         <form class="contact-form" (ngSubmit)="onSubmit()" #form="ngForm">
@@ -82,7 +86,7 @@ import emailjs from '@emailjs/browser';
 
         <div class="social-links" aria-label="Social media links">
           <a 
-            href="https://github.com" 
+            href="https://github.com/KISHOREVADDI" 
             target="_blank" 
             rel="noopener noreferrer" 
             class="social-link"
@@ -92,7 +96,7 @@ import emailjs from '@emailjs/browser';
             </svg>
           </a>
           <a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/in/kishorevaddi/" 
             target="_blank" 
             rel="noopener noreferrer" 
             class="social-link"
@@ -102,7 +106,7 @@ import emailjs from '@emailjs/browser';
             </svg>
           </a>
           <a 
-            href="https://twitter.com" 
+            href="https://x.com/kishore__pspk" 
             target="_blank" 
             rel="noopener noreferrer" 
             class="social-link"
@@ -201,29 +205,52 @@ export class ContactComponent {
       };
 
       // Send email using EmailJS
-      await emailjs.send(
+      const response = await emailjs.send(
         'service_t0pmfoe',      // Your EmailJS Service ID
-        'template_njmqdag',     // Your EmailJS Template ID
+        'template_flg2hj7',     // Your EmailJS Template ID
         templateParams
       );
+
+      console.log('EmailJS Response:', response);
 
       // Success
       this.showSuccess = true;
       this.formData = { name: '', email: '', message: '' };
+      this.formSubmitted = false;
       
       // Hide success message after 5 seconds
       setTimeout(() => {
         this.showSuccess = false;
       }, 5000);
 
-    } catch (error) {
-      console.error('EmailJS Error:', error);
+    } catch (error: any) {
+      console.error('EmailJS Error Details:', error);
+      
+      // More specific error handling
+      let errorMessage = 'Oops, something went wrong.';
+      
+      if (error?.text) {
+        // EmailJS specific error
+        if (error.text.includes('Invalid template ID')) {
+          errorMessage = 'Email template configuration error. Please check template ID.';
+        } else if (error.text.includes('Invalid service ID')) {
+          errorMessage = 'Email service configuration error. Please check service ID.';
+        } else if (error.text.includes('Invalid public key')) {
+          errorMessage = 'Email service authentication error. Please check public key.';
+        } else {
+          errorMessage = `Email error: ${error.text}`;
+        }
+      } else if (error?.message) {
+        errorMessage = `Error: ${error.message}`;
+      }
+      
+      console.error('Full error:', error);
       this.showError = true;
       
-      // Hide error message after 5 seconds
+      // Hide error message after 8 seconds (longer for debugging)
       setTimeout(() => {
         this.showError = false;
-      }, 5000);
+      }, 8000);
     } finally {
       this.isSubmitting = false;
     }

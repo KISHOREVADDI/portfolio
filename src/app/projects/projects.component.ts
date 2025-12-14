@@ -11,16 +11,16 @@ import { Router, RouterModule } from '@angular/router';
       <h1 class="page-title">Projects</h1>
       
       <div class="project-card">
-        <h2 class="card-title">Project One</h2>
+        <h2 class="card-title">Report Chain</h2>
         <p class="card-description">
-          A description of your first project. Highlight the technologies used, challenges overcome, and impact created.
-        </p>
+          A blockchain‑powered platform ensuring secure and transparent reporting of financial transactions. 
+         </p>
       </div>
 
       <div class="project-card">
-        <h2 class="card-title">Project Two</h2>
+        <h2 class="card-title">E-Commerce Website</h2>
         <p class="card-description">
-          Another project showcasing your skills and expertise. Describe the problem solved and the solution delivered.
+          A modular, scalable e‑commerce platform delivering seamless shopping, secure payments, and fast doorstep delivery.
         </p>
       </div>
 

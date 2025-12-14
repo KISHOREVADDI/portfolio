@@ -10,9 +10,50 @@ import { Router, RouterModule } from '@angular/router';
     <div class="page-content">
       <h1 class="page-title">About</h1>
       <div class="page-text">
-        <p>Welcome to my digital space. I'm Kishore, a developer and designer passionate about creating meaningful digital experiences.</p>
-        <p>With a focus on clean code and intentional design, I bring ideas to life through technology. Every project is an opportunity to craft something that matters.</p>
-        <p>When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or thinking about the next big thing.</p>
+        <p>A skilled professional with expertise in Java 8, front-end development, and cyber security. Known how to use Burp Suite for security testing and familiar with VS Code and GitHub for basic coding and version control tasks. Committed to advancing a career in technology by leveraging technical skills to enhance software security and development processes.</p>
+      </div>
+
+      <div class="resume-info-section">
+        <div class="resume-info-card">
+          <h3 class="info-section-title">Education</h3>
+          <div class="education-item">
+            <h4 class="institution-name">Godavari Institute of Engineering and Technology</h4>
+            <p class="education-details">Bachelor of Technology in Computer Science & Engineering | 2023 - 2027</p>
+            <p class="education-specialization">Specialized in Cyber Security | GPA: 8.1/10</p>
+          </div>
+          <div class="education-item">
+            <h4 class="institution-name">Dr. SRK&KSR Jr. Degree College</h4>
+            <p class="education-details">Intermediate (MPC: Mathematics, Physics, Chemistry) | 2021 - 2023</p>
+            <p class="education-specialization">Percentage: 82.1%</p>
+          </div>
+        </div>
+
+        <div class="resume-info-card">
+          <h3 class="info-section-title">Contact</h3>
+          <div class="contact-info">
+            <p><strong>Phone:</strong> +91 901048 5441</p>
+            <p><strong>Email:</strong> Kishorevaddi1204&#64;gmail.com</p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kishore-vaddi" target="_blank" rel="noopener noreferrer">linkedin.com/in/kishore-vaddi</a></p>
+          </div>
+        </div>
+
+        <div class="resume-info-card">
+          <h3 class="info-section-title">Languages</h3>
+          <div class="languages-list">
+            <span class="language-tag">Telugu (Native)</span>
+            <span class="language-tag">English</span>
+            <span class="language-tag">Hindi</span>
+          </div>
+        </div>
+
+        <div class="resume-info-card">
+          <h3 class="info-section-title">Hobbies</h3>
+          <div class="hobbies-list">
+            <span class="hobby-tag">Music and Mood Mixer</span>
+            <span class="hobby-tag">Gaming</span>
+            <span class="hobby-tag">Exploring</span>
+          </div>
+        </div>
       </div>
 
       <div class="skills-section">
@@ -59,18 +100,14 @@ export class AboutComponent {
   hoveredSkill = '';
 
   skills = [
-    { name: 'Angular', level: 90, icon: '⚡', delay: '0s' },
-    { name: 'TypeScript', level: 85, icon: '📘', delay: '0.1s' },
-    { name: 'JavaScript', level: 90, icon: '🟨', delay: '0.2s' },
-    { name: 'HTML/CSS', level: 95, icon: '🎨', delay: '0.3s' },
-    { name: 'Node.js', level: 80, icon: '🟢', delay: '0.4s' },
-    { name: 'Python', level: 85, icon: '🐍', delay: '0.5s' },
-    { name: 'Cybersecurity', level: 75, icon: '🔒', delay: '0.6s' },
-    { name: 'Git/GitHub', level: 90, icon: '📦', delay: '0.7s' },
-    { name: 'MongoDB', level: 75, icon: '🍃', delay: '0.8s' },
-    { name: 'React', level: 70, icon: '⚛️', delay: '0.9s' },
-    { name: 'Docker', level: 65, icon: '🐳', delay: '1s' },
-    { name: 'AWS', level: 70, icon: '☁️', delay: '1.1s' }
+    { name: 'Java 8', level: 85, icon: '☕', delay: '0s' },
+    { name: 'HTML', level: 90, icon: '📄', delay: '0.1s' },
+    { name: 'CSS', level: 90, icon: '🎨', delay: '0.2s' },
+    { name: 'BlockChain', level: 70, icon: '⛓️', delay: '0.3s' },
+    { name: 'Burp Suite', level: 75, icon: '🔒', delay: '0.4s' },
+    { name: 'VS Code', level: 80, icon: '💻', delay: '0.5s' },
+    { name: 'GitHub', level: 80, icon: '📦', delay: '0.6s' },
+    { name: 'Cyber Security Tools', level: 75, icon: '🛡️', delay: '0.7s' }
   ];
 
   constructor(private router: Router) {}

@@ -1,28 +1,39 @@
 # Assets Folder
 
-Place your resume PDF file here with the name `resume.pdf`
+## IMPORTANT: Add Your Resume PDF Here
 
-The file should be named exactly: `resume.pdf`
+**The current `resume.pdf` file is EMPTY (0 bytes).**
 
-## Troubleshooting
+### Steps to Fix:
 
-If the PDF doesn't load or download:
+1. **Delete the empty file**: Delete `src/assets/resume.pdf` (the current empty file)
 
-1. **Restart Angular Dev Server**: After placing the file, restart your dev server:
+2. **Add your actual resume PDF**:
+   - Get your resume PDF file from your computer
+   - Copy it to this folder: `src/assets/`
+   - Rename it to exactly: `resume.pdf`
+   - Make sure it's a valid PDF file (not empty, not corrupted)
+
+3. **Verify the file**:
+   - Right-click the file → Properties
+   - Check that file size is > 0 bytes (should be several KB or MB)
+   - Make sure it's a PDF file (extension should be .pdf)
+
+4. **Restart Angular Dev Server**:
    ```bash
+   # Stop the server (Ctrl+C)
    npm start
    ```
 
-2. **Check File Path**: The file should be at: `src/assets/resume.pdf`
+5. **Test**: Try downloading/viewing the resume again
 
-3. **Verify File**: Make sure the PDF file is not corrupted and is a valid PDF
+## File Requirements
+- ✅ File name: `resume.pdf` (exactly)
+- ✅ Location: `src/assets/resume.pdf`
+- ✅ File size: Must be > 0 bytes
+- ✅ File type: Valid PDF file
 
-4. **Clear Browser Cache**: Clear your browser cache and try again
-
-5. **Check Console**: Open browser developer tools (F12) and check for any errors
-
-## File Location
-- ✅ Correct: `src/assets/resume.pdf`
-- ❌ Wrong: `assets/resume.pdf` (without src/)
-- ❌ Wrong: `src/resume.pdf` (not in assets folder)
+## Current Status
+- ❌ File exists but is EMPTY (0 bytes)
+- ⚠️ You need to replace it with your actual resume PDF
 
