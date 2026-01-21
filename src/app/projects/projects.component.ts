@@ -11,9 +11,9 @@ import { Router, RouterModule } from '@angular/router';
       <h1 class="page-title">Projects</h1>
       
       <div class="project-card">
-        <h2 class="card-title">Report Chain</h2>
+        <h2 class="card-title">sustainable farming</h2>
         <p class="card-description">
-          A blockchain‑powered platform ensuring secure and transparent reporting of financial transactions. 
+          An innovative platform promoting eco-friendly agricultural practices through resource optimization and community engagement.
          </p>
       </div>
 
@@ -25,9 +25,9 @@ import { Router, RouterModule } from '@angular/router';
       </div>
 
       <div class="project-card">
-        <h2 class="card-title">Project Three</h2>
+        <h2 class="card-title">Portfolio Website</h2>
         <p class="card-description">
-          A third project that demonstrates your versatility and ability to work across different domains and technologies.
+          A responsive portfolio website showcasing my projects, skills, and experience.
         </p>
       </div>
       <button class="return-home-button" 
